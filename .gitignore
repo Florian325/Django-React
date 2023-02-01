@@ -1,3 +1,8 @@
 *.pyc
 .venv
+venv
+Include
+Lib
+Scripts
+*.cfg
 *.sqlite3
