@@ -9,7 +9,7 @@ This is a Django project combining the major features of both frameworks/librari
 ### Clone project
 
 ```
-git clone ...
+git clone https://github.com/Catlol325/Django-React.git
 ```
 
 ### Navigate into the Github project
