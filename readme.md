@@ -42,7 +42,7 @@ cd django_react_roject
 ```
 python manage.py shell
 ```
-
+(only example data)
 ```python
 from django_react_app.models import Product
 
