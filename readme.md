@@ -2,7 +2,9 @@
 
 ## Intoduction
 
-This is a Django project combining the major features of both frameworks/libraries
+This is a Django project combining the major features of both frameworks/libraries.
+Please let me know your thoughts in Discussuions on it :)
+Contributions and Suggestions are also welcome.
 
 ## Setup
 
