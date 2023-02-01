@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<script
+			src="https://unpkg.com/react@18/umd/react.development.js"
+			crossorigin></script>
+		<script
+			src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+			crossorigin></script>
+		<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+		<title>React-Django</title>
+	</head>
+	<body>
+		<!-- Django Application -->
+		<div class="django">
+			<h2>Django approach</h2>
+			<div>
+				{% for item in django_products %}
+				<p>Productname: <b>{{item.name}}</b></p>
+				{% endfor %}
+			</div>
+		</div>
+
+		<!-- React Application -->
+		<div id="react_root"></div>
+		<script type="text/babel">
+			const domContainer = document.querySelector("#react_root")
+			const root = ReactDOM.createRoot(domContainer)
+			function ProductsList({ t }) {
+				let prods = JSON.parse("{{react_products}}".replace(/&quot;/g, '"'))
+				return (
+					<div>
+						{prods.map(function (item) {
+							return (
+								<p key={item.id}>
+									Productname: <b>{item.name}</b>
+								</p>
+							)
+						})}
+					</div>
+				)
+			}
+			function ReactApp() {
+				return (
+					<div>
+						<h2>React approach</h2>
+						<ProductsList />
+					</div>
+				)
+			}
+
+			root.render(<ReactApp />)
+		</script>
+	</body>
+</html>
