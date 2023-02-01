@@ -1,4 +1,4 @@
-# React-Django Prototype Application
+# Django-React Prototype Application
 
 ## Intoduction
 
