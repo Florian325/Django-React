@@ -25,7 +25,7 @@ cd Django-React
 ### Create a virtual environment
 
 ```
-python -m .venv
+python -m venv .venv
 ```
 
 ### Activate the virtual environment
@@ -45,6 +45,12 @@ pip install -r requirements.txt
 
 ```
 cd django_react_roject
+```
+
+### Create Database
+
+```
+python manage.py migrate
 ```
 
 ### Seed Database

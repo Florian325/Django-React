@@ -32,10 +32,10 @@
 			const domContainer = document.querySelector("#react_root")
 			const root = ReactDOM.createRoot(domContainer)
 			function ProductsList({ t }) {
-				let prods = JSON.parse("{{react_products}}".replace(/&quot;/g, '"'))
+				let products = JSON.parse("{{react_products}}".replace(/&quot;/g, '"'))
 				return (
 					<div>
-						{prods.map(function (item) {
+						{products.map(function (item) {
 							return (
 								<p key={item.id}>
 									Productname: <b>{item.name}</b>
