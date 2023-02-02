@@ -145,7 +145,8 @@ the react logic goes in the script tag
     const domContainer = document.querySelector("#react_root")
     const root = ReactDOM.createRoot(domContainer)
     function ProductsList() { // usage of components
-        let products = JSON.parse("{{react_products}}".replace(/&quot;/g, '"')) // Django parses the data in the curly braces to react. It is important take this data to the json format and replacing the quotes
+        let products = JSON.parse("{{react_products}}".replace(/&quot;/g, '"')) 
+	// Django parses the data in the curly braces to react. It is important take this data to the json format and replacing the quotes
         return (
             <div>
                 {/* The way React renders out the data */}
